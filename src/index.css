@@ -10,3 +10,58 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
+.lets-play {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.Title {
+  display: flex;
+  justify-content: center;
+}
+
+.reset-me {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.ill-stay {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.hit-me {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.button-panel {
+  display: flex;
+  flex-direction: row;
+}
