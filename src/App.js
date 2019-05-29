@@ -3,10 +3,10 @@ import Header from './components/Header'
 
 class App extends Component {
   state = {
+    playerHand: [],
+    dealerHand: [],
     game: {
       cards: [],
-      playerHand: [],
-      dealerHand: [],
       deck: ''
     }
   }
@@ -19,7 +19,8 @@ class App extends Component {
         console.log(newDeck)
         this.setState({
           game: newDeck,
-          deck: newDeck.deck_id
+          deck: newDeck.deck_id,
+          playerHand: newDeck.cards
         })
       })
   }
@@ -44,7 +45,7 @@ class App extends Component {
         this.setState({
           game: newDeck,
           deck: newDeck.deck_id,
-          playerHand: newDeck.deck_id
+          playerHand: this.state.game.cards.concat(newDeck.cards)
         })
       })
   }
@@ -60,7 +61,7 @@ class App extends Component {
         <Header />
         <main className="">
           <div className="start-game">
-            {this.state.game.cards.map((card, i) => {
+            {this.state.playerHand.map((card, i) => {
               return <img src={card.image} />
             })}
             <div className="button-panel">
@@ -70,7 +71,7 @@ class App extends Component {
               <button
                 className="hit-me"
                 onClick={() =>
-                  this.hitMe.concat((card, j) => {
+                  this.hitMe((card, j) => {
                     return <img src={card.image} />
                   })
                 }
